@@ -1,6 +1,7 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :destroy, :update]
   def index
+    @spots = Spot.all
   end
 
   def show
