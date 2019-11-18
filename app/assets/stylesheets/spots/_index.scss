@@ -1,0 +1,28 @@
+.bg-white {
+  background-color: white;
+}
+
+.card-show {
+  justify-content: space-between;
+  display: flex;
+  height: 100%;
+  padding-top: 4px;
+  padding-bottom: 24px;
+  position: relative
+}
+
+.img-card {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0 !important;
+  width: 300px !important;
+  height: 200px !important;
+}
+
+.text-card {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  height: 200px !important;
+  margin-left: 16px !important;
+}
