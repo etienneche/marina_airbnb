@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+
+body, html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url("https://images.unsplash.com/photo-1454463795098-bbb646bad1d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3298&q=80");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3  {
+  font-family: 'Roboto';
+  color: #484848;
+}
