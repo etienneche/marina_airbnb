@@ -4,10 +4,12 @@ puts 'Done'
 
 puts "Create example spot"
 
-Spot.create!(
-  price_per_night: 100,
-  address: "Example street",
-  description: "ABC",
-  photo_url:"adce",
-  name:"name",
-  user_id: 1)
+10.times do
+  Spot.create!(
+    price_per_night: rand(200..1000),
+    address: "Cascais Marina, Casa de São Bernardo, Cascais",
+    description: Faker::Restaurant.description,
+    photo_url:"https://source.unsplash.com/featured/?",
+    name:"#{Faker::Address.city}'s Marina",
+    user_id: 1)
+end
