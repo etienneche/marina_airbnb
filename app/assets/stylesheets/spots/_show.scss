@@ -35,6 +35,7 @@
 }
 /* BUTTON */
 .btn {
+  margin: 0 auto;
   letter-spacing: 0.1em;
   cursor: pointer;
   font-size: 14px;
@@ -122,7 +123,7 @@ h2 {
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
-.month {
+.calendar-main-page .month {
   padding: 70px 25px;
   width: 100%;
   background-image: url('https://images.unsplash.com/photo-1444621514115-2aaa4e7d0ab9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80');
@@ -130,48 +131,48 @@ body {font-family: Verdana, sans-serif;}
   text-align: center;
 }
 
-.month ul {
+.calendar-main-page .month ul {
   margin: 0;
   padding: 0;
 }
 
-.month ul li {
+.calendar-main-page .month ul li {
   color: white;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
-.month .prev {
+.calendar-main-page .month .prev {
   float: left;
   padding-top: 10px;
 }
 
-.month .next {
+.calendar-main-page .month .next {
   float: right;
   padding-top: 10px;
 }
 
-.weekdays {
+.calendar-main-page .weekdays {
   margin: 0;
   padding: 10px 0;
   background-color: #ddd;
 }
 
-.weekdays li {
+.calendar-main-page .weekdays li {
   display: inline-block;
   width: 13.6%;
   color: #666;
   text-align: center;
 }
 
-.days {
+.calendar-main-page .days {
   padding: 10px 0;
   background: #eee;
   margin: 0;
 }
 
-.days li {
+.calendar-main-page .days li {
   list-style-type: none;
   display: inline-block;
   width: 13.6%;
@@ -181,10 +182,19 @@ body {font-family: Verdana, sans-serif;}
   color: #777;
 }
 
-.days li .active {
+.calendar-main-page .days li .active {
   padding: 5px;
   background: brown;
   color: white !important
+}
+.main-date-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.container-input {
+  margin-top: 30px;
 }
 
 /* Add media queries for smaller screens */
@@ -202,12 +212,17 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* STICKY menu */
-#input {
-  margin-bottom: 15px;
+.input {
+  padding: 15px;
+  margin: 20px;
+}
+.check-in {
+  margin: 15px;
 }
 .menu{
   border: 1px solid lightgray;
 
+  padding-left: 30px;
 }
 #sticky-btn {
   display: block;
