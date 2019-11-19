@@ -1,0 +1,28 @@
+.btn-login {
+  background-color: #ff5b60;
+  display: block;
+  color: white !important;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 0px;
+}
+
+.btn-login > input {
+  color:white;
+  padding: 0;
+}
+
+.login-notes {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-notes > a {
+  color: #018489;
+}
+
+.form-check > label {
+  color: #484848;
+}
