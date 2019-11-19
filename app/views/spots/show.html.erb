@@ -29,15 +29,15 @@
     <div class="row">
       <div class="col-3">
         <div class="menu" style="position:sticky; top :75px;">
-          <h3>Add Date for see the price.</h3>
+          <h3>Fill to see the price.</h3>
 
           <form action="calendar">
             <div class="col-md-8">
               <div class="form-group"></div>
             </div>
             <h4>Dates</h4>
-            <div class="col-md-2" id="input"><input type="text" placeholder="When do you arrive"></div>
-            <div class="col-md-2" id="input"><input type="text" placeholder="When do you leave"></div>
+            <input class="check-in" type="text" name="daterange" value="01/01/2018 - 01/15/2018" >
+
             <h4>Facilities</h4>
             <div class="col-md-4" id="input"><input type="text" placeholder="Do you live on your Boat"></div>
             <div class="col-md-4" id="input"><input type="text" placeholder="Do you need Wifi"></div>
@@ -91,7 +91,7 @@
             <h5>Harbour : ***</h5>
           </div>
         </div>
-        <div class="calendar">
+        <div class="calendar-main-page">
           <h2>Calendar Avaibility</h2>
           <div class="month">
             <ul>
@@ -146,8 +146,8 @@
           </ul>
         </div>
         <div class="container-input" style="display: flex; justify-content: space-around;">
-          <input type="text" placeholder="FROM">
-          <input type="text" placeholder="TO">
+          <input class="main-date-input" type="text" placeholder="FROM">
+          <input class="main-date-input" type="text" placeholder="TO">
         </div>
         <div class="container-map">
           <iframe class="map" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps(...)"></iframe>
