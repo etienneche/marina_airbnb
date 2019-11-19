@@ -10,6 +10,6 @@ puts "Create example spot"
     address: "Cascais Marina, Casa de São Bernardo, Cascais",
     description: Faker::Restaurant.description,
     photo_url:"https://source.unsplash.com/featured/?",
-    name:"#{Faker::Address.city}'s Marina",
+    marina_name:"#{Faker::Address.city}'s Marina",
     user_id: 1)
 end
