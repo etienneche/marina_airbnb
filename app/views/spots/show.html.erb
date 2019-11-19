@@ -35,17 +35,36 @@
             <div class="col-md-8">
               <div class="form-group"></div>
             </div>
+            <h4>Dates</h4>
             <div class="col-md-2" id="input"><input type="text" placeholder="When do you arrive"></div>
             <div class="col-md-2" id="input"><input type="text" placeholder="When do you leave"></div>
+            <h4>Facilities</h4>
             <div class="col-md-4" id="input"><input type="text" placeholder="Do you live on your Boat"></div>
             <div class="col-md-4" id="input"><input type="text" placeholder="Do you need Wifi"></div>
-
+            <a class="btn effect01" href="#" id="sticky-btn">SEARCH</a>
           </form>
         </div>
       </div>
-      <div class="col-6">
-        <h2>Title of the location</h2>
-        <p>
+
+      <div class="col-8">
+        <div class="d-flex" style="justify-content: space-around;">
+          <h2><%= @spot.name %></h2>
+          <div>
+            <div class="card-owner">
+
+              <div class="card-owner-infos">
+                <div>
+                  <h3>name</h3>
+
+                </div>
+
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" style="width:80px;" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="description">
           Description loremLe Lorem Ipsum est simplement du
           faux texte employé dans la composition et la mise en
           page avant impression. Le Lorem Ipsum est le faux texte
@@ -60,6 +79,18 @@
           inclusion dans des applications de mise en page de texte,
           comme Aldus PageMaker.
         </p>
+        <div>
+          <div>
+            <h5>Size: 8m²</h5>
+          </div>
+
+          <div>
+            <h5>Price: 6000/m</h5>
+          </div>
+          <div>
+            <h5>Harbour : ***</h5>
+          </div>
+        </div>
         <div class="calendar">
           <h2>Calendar Avaibility</h2>
           <div class="month">
@@ -121,18 +152,52 @@
         <div class="container-map">
           <iframe class="map" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps(...)"></iframe>
         </div>
-      </div>
-      <div class="col-3">
-        <div>
-          <h5>Size: 8m²</h5>
+        <h3>REVIEW ABOUT THE OWNER</h3>
+        <div class="container-review">
+        <div class="comment-section">
+          <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
+
+          <div class="card-comment-section">
+            <h4>Review from @user </h4>
+            <div class="card-comment">
+              <div class="card-comment-infos">
+                <h5>"Amazing stay"</h5>
+                <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="comment-section">
+          <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
+
+          <div class="card-comment-section">
+            <h4>Review from @user </h4>
+            <div class="card-comment">
+              <div class="card-comment-infos">
+                <h5>"D'la merde stay"</h5>
+                <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="comment-section">
+          <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
+
+          <div class="card-comment-section">
+            <h4>Review from @user </h4>
+            <div class="card-comment">
+              <div class="card-comment-infos">
+                <h5>"Cheap stay"</h5>
+                <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div>
-          <h5>Price: 6000/m</h5>
-        </div>
-        <div>
-          <h5>Harbour : ***</h5>
-        </div>
       </div>
-    </div>
-  </div>
+
+
+

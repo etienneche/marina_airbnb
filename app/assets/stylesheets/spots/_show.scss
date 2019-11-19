@@ -114,7 +114,8 @@ h5 {
 
 /* MIDDLE COL */
 h2 {
- padding-top: 20px;
+  font-size: 36px;
+ padding-top: 36px;
 }
 /* Calendar */
 * {box-sizing: border-box;}
@@ -203,7 +204,13 @@ body {font-family: Verdana, sans-serif;}
 /* STICKY menu */
 #input {
   margin-bottom: 15px;
+}
+.menu{
+  border: 1px solid lightgray;
 
+}
+#sticky-btn {
+  display: block;
 }
 
 /* MAP */
@@ -214,3 +221,39 @@ body {font-family: Verdana, sans-serif;}
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+/* Card owner */
+/* Description */
+.description {
+  margin-top: 80px;
+}
+
+/*Card comment*/
+.comment-section {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.comment-section img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-comment-section {
+  padding-left: 20px;
+}
+
+.comment-section p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+
+
