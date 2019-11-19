@@ -3,7 +3,7 @@
     <% @spots.each do |spot| %>
     <div class="card-show border-top pt-3 bg-white">
       <div class="img-card">
-        <img class ="rounded" style= "width: 300px", src="https://images.unsplash.com/photo-1566021988761-550ac4bd5c60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" alt="">
+        <img class ="rounded" style= "width: 300px", src=<%= spot.photo_url %> >
       </div>
       <div class="card-body">
         <div class="card-tag d-flex justify-content-between">
@@ -13,7 +13,7 @@
           </div>
         </div>
         <h4 class="title-card"> <%= link_to spot.marina_name, spot_path(spot) %></h4>
-        <p class="desc-card">One of the most beautiful marina's in Portugal</p>
+        <p class="desc-card"><%= spot.description %></p>
       </div>
   </div>
   <% end %>
