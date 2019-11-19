@@ -31,31 +31,46 @@
         <div class="menu" style="position:sticky; top :75px;">
           <h3>Fill to see the price.</h3>
 
-          <form action="calendar">
-            <div class="col-md-8">
-              <div class="form-group"></div>
-            </div>
+         <div class="form-group">
+          <%= simple_form_for @spot do |f| %>
+
+            <%= f.input   :address,
+                          placeholder: "Address",
+                          label: false,
+                          required: true %>
+
+            <%= f.input   :price_per_night,
+                          placeholder: "Price Per Night",
+                          label: false,
+                          required: true %>
+            <%= f.input   :boat_size,
+                          placeholder: "Boat Size",
+                          label: false,
+                          required: true %>
             <h4>Dates</h4>
             <input class="check-in" type="text" name="daterange" value="01/01/2018 - 01/15/2018" >
-
-            <h4>Facilities</h4>
-            <div class="col-md-4" id="input"><input type="text" placeholder="Do you live on your Boat"></div>
-            <div class="col-md-4" id="input"><input type="text" placeholder="Do you need Wifi"></div>
-            <a class="btn effect01" href="#" id="sticky-btn">SEARCH</a>
-          </form>
+            <div class="form-actions btn-login">
+              <%= f.button :submit, "Search My Spot" %>
+            </div>
+          <% end %>
+        </div>
         </div>
       </div>
 
       <div class="col-8">
         <div class="d-flex" style="justify-content: space-around;">
+          <div class="wrap-for-title">
           <h2><%= @spot.marina_name %></h2>
+          <h6>Spot N°666 next to the fish with blue stripe</h6>
+          </div>
           <div>
+
             <div class="card-owner">
 
               <div class="card-owner-infos">
                 <div>
                   <h3>name</h3>
-
+                  <p>Owner details</p>
                 </div>
 
                 <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" style="width:80px;" />
@@ -88,7 +103,7 @@
             <h5>Price: 6000/m</h5>
           </div>
           <div>
-            <h5>Harbour : ***</h5>
+            <h5>Harbour : * * * </h5>
           </div>
         </div>
         <div class="calendar-main-page">
