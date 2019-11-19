@@ -1,7 +1,6 @@
 .btn-login {
   background-color: #ff5b60;
   display: block;
-  color: white !important;
   text-align: center;
   border-radius: 4px;
   text-decoration: none;
@@ -11,6 +10,13 @@
 .btn-login > input {
   color:white;
   padding: 0;
+}
+
+.btn-login:hover {
+  background-color: #E65358;
+  > input {
+    color:white;
+  }
 }
 
 .login-notes {

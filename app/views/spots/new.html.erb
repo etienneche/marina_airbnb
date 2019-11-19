@@ -1,2 +1,41 @@
-<h1>Spots#new</h1>
-<p>Find me in app/views/spots/new.html.erb</p>
+<div class="bg-image pt-4">
+  <div class="col-4 offset-4" style="margin-top:100px">
+    <div class="card bg-white p-4">
+      <h2>List your Marina</h2>
+        <div class="form-group">
+          <%= simple_form_for @spot do |f| %>
+            <%= f.input   :marina_name,
+                          placeholder: "Marina Name",
+                          label: false,
+                          required: true %>
+            <%= f.input   :address,
+                          placeholder: "Address",
+                          label: false,
+                          required: true %>
+            <%= f.input   :spot_name,
+                          placeholder: "Spot Name",
+                          label: false,
+                          required: true %>
+            <%= f.input   :description,
+                          placeholder: "Description",
+                          label: false,
+                          required: true %>
+            <%= f.input   :price_per_night,
+                          placeholder: "Price Per Night",
+                          label: false,
+                          required: true %>
+            <%= f.input   :boat_size,
+                          placeholder: "Boat Size",
+                          label: false,
+                          required: true %>
+            <%= f.input   :photo_url,
+                          placeholder: "Photo URL",
+                          label: false %>
+            <div class="form-actions btn-login">
+              <%= f.button :submit, "Create a Spot" %>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
