@@ -12,7 +12,9 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+    <div style= "height:60px;">
     <%= render 'shared/navbar' %>
+    </div>
       <%= yield %>
     <%= render 'shared/flashes' %>
     <%= javascript_include_tag 'application' %>
