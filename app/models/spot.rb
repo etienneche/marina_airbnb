@@ -6,4 +6,5 @@ class Spot < ApplicationRecord
   validates :price_per_night, presence: true
   validates :description, presence: true
   validates :address, presence: true
+  validates :boat_size, numericality: true
 end
