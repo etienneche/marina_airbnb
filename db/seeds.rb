@@ -7,6 +7,12 @@ puts
 
 puts "Create 5 spots"
 
+  User.create!(
+    email:"test@gmail.com",
+    name: "Test Accoumt"
+  )
+
+
   Spot.create!(
     price_per_night: rand(200..1000),
     marina_name: "Cascais Marina",
