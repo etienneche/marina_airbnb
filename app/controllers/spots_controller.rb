@@ -6,9 +6,7 @@ class SpotsController < ApplicationController
       {
         lat: spot.latitude,
         lng: spot.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { spot: spot }),
-        image_url: helpers.asset_url('https://www.clipartwiki.com/clipimg/detail/232-2321534_anchor-png-clipart-anchor-ship.png')
-
+        infoWindow: render_to_string(partial: "info_window", locals: { spot: spot })
       }
     end
   end
