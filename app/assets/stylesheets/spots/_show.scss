@@ -1,3 +1,4 @@
+/* PICTURE TOP */
 .banner {
   background-size: cover;
   background-position: center;
@@ -18,7 +19,7 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-
+/* BUTTON */
 .container-btn {
   align-items: center;
   display: flex;
@@ -103,12 +104,14 @@ justify-content: space-around;
     padding-bottom: 10px;
     box-shadow: 0px 5px 5px lightgray;
     background-color: white;
+    padding-top: 20px;
+
 }
 
 .description {
   margin-bottom: 60px;
 }
-/* Calendar */
+/* CALENDAR */
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
 
@@ -247,7 +250,7 @@ form {
   height: 450px;
   margin-top: 40px;
 }
-/* Card owner */
+
 /* Description */
 .description {
   margin-top: 80px;
