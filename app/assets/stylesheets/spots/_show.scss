@@ -27,21 +27,7 @@
   background-color: #FFF;
   padding:  40px 0px;
   width: 240px;
-}
-/* BUTTON */
-.btn {
-  margin: 0 auto;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 45px;
-  max-width: 160px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 100%;
-}
+
 .btn:hover {
   text-decoration: none;
 }
@@ -135,7 +121,6 @@ justify-content: space-around;
 /* Calendar */
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
 
 .calendar-with-input {
   border: 1px solid lightgray;

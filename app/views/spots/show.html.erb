@@ -1,6 +1,4 @@
-<div class="container">
-
-
+<div class="container-image">
   <div class="banner" style="background-size: cover; height: 800px; width: 100vw; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1567427016554-4ef2872c702f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);">
     <div class="container-fluid">
 
@@ -8,88 +6,81 @@
         <div class="p-2">
           <a class="btn effect01" href="#">MAP</a>
         </div>
-
         <div class="p-2">
           <a class="btn effect01" href="#">SAVE</a>
         </div>
-
         <div class="p-2">
-          <a class="btn effect01" href="#">SHARE</a></div>
+          <a class="btn effect01" href="#">SHARE</a>
         </div>
       </div>
-
     </div>
-
-
   </div>
+</div>
 
-  <div id="c-all-colum" class="d-flex justify-content-between mr-1">
-    <div class="row">
-      <div class="col-1"></div>
-
-      <div class="col-10"> <!-- When map and calendar "on" put col-8 -->
-        <div id="block-title-avatar" class="d-flex justify-content-around">
-          <div class="wrap-for-title">
-            <h2><strong><%= @spot.marina_name %></strong></h2>
-            <h6>Spot N°666 next to the fish with blue stripe</h6>
-          </div>
-          <div>
-
-            <div class="card-owner">
-
-              <div class="card-owner-infos">
-                                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" style="width:80px;" />
-
-                <div>
-                  <h3>name</h3>
-                  <p>Owner details</p>
-                </div>
-
-              </div>
+<div id="c-all-colum" class="d-flex justify-content-between mr-1">
+  <div class="col-1">
+  </div>
+  <div class="col-6">
+    <div id="block-title-avatar" class="d-flex justify-content-around">
+      <div class="wrap-for-title">
+        <h2><strong><%= @spot.marina_name %></strong></h2>
+        <h6>Spot N°666 next to the fish with blue stripe</h6>
+      </div>
+      <div>
+        <div class="card-owner">
+          <div class="card-owner-infos">
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" style="width:80px;" />
+            <div>
+              <h3>name</h3>
+              <p>Owner details</p>
             </div>
           </div>
         </div>
-        <div class="container-details-spot">
-          <div>
-            <h5>Size: 8m²</h5>
-          </div>
+      </div>
+    </div>
+    <div class="container-details-spot">
+      <div>
+        <h5>Size: 8m²</h5>
+      </div>
 
-          <div>
-            <h5>Price: 6000/m</h5>
-          </div>
-          <div>
-            <h5>Harbour : * * * </h5>
-          </div>
+      <div>
+        <h5>Price: 6000/m</h5>
+      </div>
+      <div>
+        <h5>Harbour : * * * </h5>
+      </div>
+    </div>
+    <div class="description">
+      <p>
+        Description loremLe Lorem Ipsum est simplement du
+        faux texte employé dans la composition et la mise en
+        page avant impression. Le Lorem Ipsum est le faux texte
+        standard de l'imprimerie depuis les années 1500, quand
+        un imprimeur anonyme assembla ensemble des morceaux de
+        texte pour réaliser un livre spécimen de polices de texte.
+        Il n'a pas fait que survivre cinq siècles, mais s'est
+        aussi adapté à la bureautique informatique, sans que son
+        contenu n'en soit modifié. Il a été popularisé dans les
+        années 1960 grâce à la vente de feuilles Letraset contenant
+        des passages du Lorem Ipsum, et, plus récemment, par son
+        inclusion dans des applications de mise en page de texte,
+        comme Aldus PageMaker.
+      </p>
+    </div>
+
+    <!-- calendar main part -->
+<!--
+    <div class="calendar-main-page">
+      <h2>Calendar Avaibility</h2>
+      <div class="calendar-with-input">
+        <div class="month">
+          <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>August<br><span style="font-size:18px">2017</span></li>
+          </ul>
         </div>
-        <div>
-          <p class="description">
-            Description loremLe Lorem Ipsum est simplement du
-            faux texte employé dans la composition et la mise en
-            page avant impression. Le Lorem Ipsum est le faux texte
-            standard de l'imprimerie depuis les années 1500, quand
-            un imprimeur anonyme assembla ensemble des morceaux de
-            texte pour réaliser un livre spécimen de polices de texte.
-            Il n'a pas fait que survivre cinq siècles, mais s'est
-            aussi adapté à la bureautique informatique, sans que son
-            contenu n'en soit modifié. Il a été popularisé dans les
-            années 1960 grâce à la vente de feuilles Letraset contenant
-            des passages du Lorem Ipsum, et, plus récemment, par son
-            inclusion dans des applications de mise en page de texte,
-            comme Aldus PageMaker.
-          </p>
-        </div>
-
-       <!--  <div class="calendar-main-page">
-          <h2>Calendar Avaibility</h2>
-          <div class="calendar-with-input">
-          <div class="month">
-            <ul>
-              <li class="prev">&#10094;</li>
-              <li class="next">&#10095;</li>
-              <li>August<br><span style="font-size:18px">2017</span></li>
-            </ul>
-          </div>
-
+        <div class="weekdays">
           <ul class="weekdays">
             <li>Mo</li>
             <li>Tu</li>
@@ -99,7 +90,8 @@
             <li>Sa</li>
             <li>Su</li>
           </ul>
-
+        </div>
+        <div class="days">
           <ul class="days">
             <li>1</li>
             <li>2</li>
@@ -138,106 +130,112 @@
           <input class="main-date-input" type="text" placeholder="FROM">
           <input class="main-date-input" type="text" placeholder="TO">
         </div>
-        </div> -->
-       <!--  <div class="container-map">
-          <iframe class="map" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps(...)"></iframe>
-        </div>
-        <div> -->
-          <h3>REVIEW ABOUT THE OWNER</h3>
-          <div class="container-review">
-            <div class="comment-section">
-              <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
-
-              <div class="card-comment-section">
-                <h4>Review from @user </h4>
-                <div class="card-comment">
-                  <div class="card-comment-infos">
-                    <h5>"Amazing stay"</h5>
-                    <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="comment-section">
-              <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
-
-              <div class="card-comment-section">
-                <h4>Review from @user </h4>
-                <div class="card-comment">
-                  <div class="card-comment-infos">
-                    <h5>"D'la merde stay"</h5>
-                    <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="comment-section">
-              <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
-
-              <div class="card-comment-section">
-                <h4>Review from @user </h4>
-                <div class="card-comment">
-                  <div class="card-comment-infos">
-                    <h5>"Cheap stay"</h5>
-                    <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
       </div>
+    </div>
 
+    <-- map main part -->
 
-      <div class="col-4">
+   <!-- <div class="container-map">
+      <iframe class="map" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps(...)"></iframe>
+    </div>-->
 
-        <div class="form-wrapper-sticky">
-          <div class="col-12">
-            <div id="sticky-menu" class="card bg-white p-4">
-              <h2> Book marinas</h2>
-              <form>
-                <div class="row">
-                  <div class="col-12 input-grp">
-                    <label>City or Marina</label>
-                    <input type="city or marina" class="form-control" placeholder="Anywhere">
-                  </div>
-                </div>
+    <!-- review main part -->
 
-                <div class="row">
-                  <div class="col-12 input-grp">
-                    <label>Check In</label>
-                    <input type="date" class="form-control select-date" placeholder="Date">
-                  </div>
-                </div>
+    <div class="reviews">
+      <h3>REVIEW ABOUT THE OWNER</h3>
+      <div class="container-review">
+        <div class="comment-section">
+          <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
 
-                <div class="row">
-                  <div class="col-12 input-grp">
-                    <label>Check Out</label>
-                    <input type="date" class="form-control select-date" placeholder="Date">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-12 input-grp">
-                    <label>Boat size(meters)</label>
-                    <input type="number" class="form-control" value="1">
-                  </div>
-                </div>
-
-                <div class="btn-grp">
-                  <button type="button" class="btn btn-login btn-100">Search</button>
-                </div>
-
-
-              </form>
+          <div class="card-comment-section">
+            <h4>Review from @user </h4>
+            <div class="card-comment">
+              <div class="card-comment-infos">
+                <h5>"Amazing stay"</h5>
+                <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
+              </div>
             </div>
           </div>
         </div>
 
+          <div class="comment-section">
+            <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
+
+            <div class="card-comment-section">
+              <h4>Review from @user </h4>
+              <div class="card-comment">
+                <div class="card-comment-infos">
+                  <h5>"D'la merde stay"</h5>
+                  <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="comment-section">
+            <img src="https://images.unsplash.com/photo-1470923267153-a9effefa7551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80" style="width: 150px;" />
+
+            <div class="card-comment-section">
+              <h4>Review from @user </h4>
+              <div class="card-comment">
+                <div class="card-comment-infos">
+                  <h5>"Cheap stay"</h5>
+                  <p>Rent the spot for 6 months, the security in the harbour was <strong>perfect</strong> on the week end .</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
       </div>
-      <div class="col-1"></div>
     </div>
   </div>
+
+  <!-- menu sticky -->
+
+  <div class="col-4">
+    <div class="form-wrapper-sticky">
+      <div class="col-12">
+        <div id="sticky-menu" class="card bg-white p-4">
+          <h2> Book marinas</h2>
+          <form>
+            <div class="row">
+              <div class="col-12 input-grp">
+                <label>City or Marina</label>
+                <input type="city or marina" class="form-control" placeholder="Anywhere">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 input-grp">
+                <label>Check In</label>
+                <input type="date" class="form-control select-date" placeholder="Date">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 input-grp">
+                <label>Check Out</label>
+                <input type="date" class="form-control select-date" placeholder="Date">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 input-grp">
+                <label>Boat size(meters)</label>
+                <input type="number" class="form-control" value="1">
+              </div>
+            </div>
+
+            <div class="btn-grp">
+              <button type="button" class="btn btn-login btn-100">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-1">
+  </div>
+</div>
+
+
+
