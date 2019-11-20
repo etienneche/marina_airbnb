@@ -12,37 +12,51 @@
 
   <div class="home-video-wrapper">
   <%= video_tag "marina.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
-  <h1 class="home"> Book unique marinas!</h1>
-  </div>
 
-  <form>
-    <div class="input-grp">
+
+
+  <div class="form-wrapper">
+  <div class="col-12">
+    <div class="card bg-white p-4">
+      <h1> Book unique marinas!</h1>
+    <form>
+      <div class="row">
+    <div class="col-12 input-grp">
       <label>City or Marina</label>
       <input type="city or marina" class="form-control" placeholder="Anywhere">
     </div>
+  </div>
 
-    <div class="input-grp">
+   <div class="row">
+    <div class="col-6 input-grp">
       <label>Check In</label>
       <input type="date" class="form-control select-date" placeholder="Date">
     </div>
 
-    <div class="input-grp">
+    <div class="col-6 input-grp">
       <label>Check Out</label>
       <input type="date" class="form-control select-date" placeholder="Date">
     </div>
+  </div>
 
-     <div class="input-grp">
+   <div class="row">
+     <div class="col-12 input-grp">
       <label>Boat size(meters)</label>
       <input type="number" class="form-control" value="1">
     </div>
+  </div>
 
-
-    <div class="input-grp">
-    <button type="button" class="btn btn-primary booking">Search</button>
+    <div class="btn-grp">
+    <button type="button" class="btn btn-login btn-100">Search</button>
     </div>
 
 
-  </form>
+    </form>
+  </div>
+  </div>
+</div>
+</div>
+
 <div class="p-5">
   <h2>Best Marinas around the world </h2>
 
