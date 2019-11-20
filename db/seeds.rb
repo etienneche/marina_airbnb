@@ -50,6 +50,15 @@ puts "Create 5 spots"
     description: "Fantastic marina. Staff are friendly and helpful beyond the norm. This includes free bread every morning.The electricity and wifi are reliable and best we have had in Portugal so far. The marina restaurants are great, especially Charkoal. The berthing fees are very competitive. ",
     photo_url: "https://magnolia-portugal.dunegestion.com/public/magnolia-portugal/tHcIp_marina4.jpg",
     user_id: 1)
+#done
+
+   Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Marina da Figueira da Foz",
+    address: "Marina da Figueira da Foz",
+    description: "The harbourmaster is very nice. There are easy acces to the harbour. But there can be a lot of current depending of the tide in the harbour.",
+    photo_url: "https://cnaff.pt/sites/default/files/basicpage/Marina%20%282%29.jpg",
+    user_id: 1)
 
 #done
 
