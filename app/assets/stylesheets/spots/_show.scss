@@ -110,25 +110,43 @@ h5 {
 
 /* MIDDLE COL */
 h2 {
+  justify-content: center;
+    display: flex;
   font-size: 36px;
- padding-top: 36px;
 }
 
 /*DETAILS DESCRIPTION SPOT*/
+#block-title-avatar {
+  padding-top: 20px;
+}
 
 .container-details-spot {
+justify-content: space-around;
+    display: flex;
+    border: 1px solid lightgray;
+    padding-bottom: 10px;
+    box-shadow: 0px 5px 5px lightgray;
+    background-color: white;
+}
 
+.description {
+  margin-bottom: 60px;
 }
 /* Calendar */
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
+.calendar-with-input {
+  border: 1px solid lightgray;
+box-shadow: 0px 5px 5px lightgrey;
+}
+
 .calendar-main-page .month {
   padding: 70px 25px;
   width: 100%;
   background-image: url('https://images.unsplash.com/photo-1526590776442-5541f7dcf2c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=748&q=80');
-  background-position: bottom;
+  background-position: center;
   text-align: center;
 }
 
@@ -169,7 +187,7 @@ body {font-family: Verdana, sans-serif;}
 
 .calendar-main-page .days {
   padding: 10px 0;
-  background: #eee;
+  background: white;
   margin: 0;
 }
 
@@ -224,6 +242,17 @@ body {font-family: Verdana, sans-serif;}
 .input {
   padding: 15px;
   margin: 20px;
+}
+.form-wrapper-sticky
+{
+  position: sticky;
+  margin-top: 20px;
+  top: 90px;
+  left: 15px;
+  bottom: 100px;
+}
+#sticky-menu {
+  box-shadow: 0px 5px 5px lightgrey;
 }
 
 form {
