@@ -5,7 +5,10 @@ class SpotsController < ApplicationController
     @markers = @spots.map do |spot|
       {
         lat: spot.latitude,
-        lng: spot.longitude
+        lng: spot.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { spot: spot }),
+        image_url: helpers.asset_url('https://www.clipartwiki.com/clipimg/detail/232-2321534_anchor-png-clipart-anchor-ship.png')
+
       }
     end
   end
