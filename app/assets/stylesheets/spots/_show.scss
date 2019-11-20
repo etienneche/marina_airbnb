@@ -1,4 +1,6 @@
-
+.row {
+  margin-right: 200px;
+}
 .container {
   margin: 0px;
   padding: 0px;
@@ -118,6 +120,12 @@ h2 {
   font-size: 36px;
  padding-top: 36px;
 }
+
+/*DETAILS DESCRIPTION SPOT*/
+
+.container-details-spot {
+
+}
 /* Calendar */
 * {box-sizing: border-box;}
 ul {list-style-type: none;}
@@ -212,22 +220,22 @@ body {font-family: Verdana, sans-serif;}
 }
 
 /* STICKY menu */
-.input {
-  padding: 15px;
-  margin: 20px;
+.menu{
+  border: 1px solid lightgray;
+
+  margin: 18px;
 }
 .check-in {
   margin: 15px;
 }
-.menu{
-  border: 1px solid lightgray;
-
-  padding-left: 30px;
-}
-#sticky-btn {
-  display: block;
+.input {
+  padding: 15px;
+  margin: 20px;
 }
 
+form {
+  margin: 20px;
+}
 /* MAP */
 .map {
   -webkit-filter: grayscale(100%);
@@ -235,6 +243,10 @@ body {font-family: Verdana, sans-serif;}
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+.container-map {
+  height: 450px;
+  margin-top: 40px;
 }
 /* Card owner */
 /* Description */
@@ -250,7 +262,7 @@ body {font-family: Verdana, sans-serif;}
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 25px;
 }
 
 .comment-section img {
