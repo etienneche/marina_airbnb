@@ -1,11 +1,16 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :destroy, :update]
   def index
-    @spots = Spot.all
+    @spots = Spot.geocoded
+    @markers = @spots.map do |spot|
+      {
+        lat: spot.latitude,
+        lng: spot.longitude
+      }
+    end
   end
 
   def show
-
   end
 
   def new
