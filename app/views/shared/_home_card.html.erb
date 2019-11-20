@@ -1,0 +1,36 @@
+<div class= "container">
+
+  <div class="row">
+    <% @spots.each do |spot| %>
+      <div class="col-4">
+        <div class="card">
+          <img class=" card-img-top img-fluid" src= <%= spot.photo_url %>>
+          <div class="card-body">
+              <h4 class="card-title"><%= spot.marina_name%></h4>
+              <p class="card-text"><%= spot.address%></p>
+              <p class="card-text">
+                <i class="fas fa-euro-sign ml-2"></i> <%= spot.price_per_night %>
+              </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

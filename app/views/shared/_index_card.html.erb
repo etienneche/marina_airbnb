@@ -1,0 +1,17 @@
+<% @spots.each do |spot| %>
+    <div class="card-show border-top pt-3 bg-white">
+      <div class="img-card">
+        <img class ="rounded" style= "width: 300px", src=<%= spot.photo_url %> >
+      </div>
+      <div class="card-body">
+        <div class="card-tag d-flex justify-content-between">
+          <p class="desc-card mb-1">Private Spot</p>
+          <div>
+            <p class="desc-card" style="color:#222222"><i class="fas fa-star" style="color:#ff385c"></i> 4.60 <span style="color:#717171">(166)</span></p>
+          </div>
+        </div>
+        <h4 class="title-card"> <%= link_to spot.marina_name, spot_path(spot) %></h4>
+        <p class="desc-card"><%= spot.description %></p>
+      </div>
+  </div>
+  <% end %>
