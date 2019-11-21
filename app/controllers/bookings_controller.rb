@@ -16,7 +16,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.spot = @spot
-    @booking.save
+
+    if @booking.save
+      redirect_to spot_bookings_path(@booking)
+    else
+      render :new
+    end
   end
 
   def edit
