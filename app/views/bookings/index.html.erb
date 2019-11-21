@@ -6,14 +6,18 @@
         <th scope="col">Spot</th>
         <th scope="col">From</th>
         <th scope="col">To</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= Spot.find(booking.spot_id) %></td>
+        <td><%= Spot.find(booking.spot_id).marina_name %></td>
         <td><%= booking.start_date %></td>
         <td><%= booking.end_date %></td>
+        <td><%= link_to "Edit", edit_spot_booking_path(booking.spot, booking) %></td>
+        <td><%= link_to "Delete", spot_booking_path(booking.spot, booking), method: :delete%></td>
       </tr>
     <% end  %>
     </tbody>
