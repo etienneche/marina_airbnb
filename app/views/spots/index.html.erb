@@ -1,10 +1,10 @@
-<div class= "d-flex">
+<div class= "d-flex pl-4">
   <div class="bg-white pt-4" style="height: 100vh; overflow:scroll; display:absolute; width: 50%;">
     <h3>More than <%= @spots.size %> Spots</h3>
       <% @spots.each do |spot| %>
       <div class="card-show border-top pt-3 bg-white">
         <div class="img-card">
-          <img class ="rounded" style= "width: 300px; height:200px", src=<%= spot.photo_url %> >
+          <%= cl_image_tag spot.photo, crop: :fill, class:"img-spot" %>
         </div>
         <div class="card-body">
           <div class="card-tag d-flex justify-content-between">
