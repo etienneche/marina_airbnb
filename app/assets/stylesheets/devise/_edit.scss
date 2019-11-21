@@ -9,7 +9,7 @@ body {
   padding-bottom: 150px;
 }
 .profile-info {
-  border: 1px solid lightgray;
+  border: 1px solid $light-gray;
   padding: 50px;
 }
 .profile-title {
@@ -20,16 +20,16 @@ body {
   padding: 20px;
   width: 400px;
   margin: 10px auto;
-  border: 1px solid lightgray;
+  border: 1px solid $light-gray;
 }
 .form-actions {
-  background-color: #ff5b60;
+  background-color: $red;
   text-align: center;
   border-radius: 4px;
   text-decoration: none;
 }
 .form-actions:hover {
-  background-color: red;
+  background-color: #E65358;
 }
 .btn {
   color: white !important;
