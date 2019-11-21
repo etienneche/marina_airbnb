@@ -65,7 +65,7 @@ h1.home {
 .cards {
   display:flex;
   margin: 50px auto 25px;
-  background-color: red;
+  background-color: $red;
 }
 
 .card-trip {
@@ -112,7 +112,17 @@ h1.home {
 }
 
 .form-font {
-  color: #484848;
+  color: $gray;
   font-size: 13px;
 }
 
+.img-spot {
+  height: 200px;
+  width: 300px;
+  border-radius: 3%;
+}
+
+.img-landing {
+  height: 200px;
+  max-width: 100%;
+}

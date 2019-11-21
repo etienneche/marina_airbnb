@@ -5,7 +5,7 @@ class Spot < ApplicationRecord
 
   belongs_to :user
   has_many :reviews, through: :booking
-  has_many :bookings
+  has_many :bookings, dependent: :delete_all
 
   validates :marina_name, presence: true
   validates :price_per_night, presence: true
