@@ -1,9 +1,29 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="d-flex container-profile">
+  <div class="profile-info">
+    <img src="./././assets/images/avatar2.jpg" alt="avatar-user">
+    <p>Upload my profile picture.</p>
+    <h4><%= @user.name.capitalize %> personnal infos:</h4>
+    <p>✔️ E-mail address confirm</p>
+    <p>Account create <%= @user.created_at.strftime("%F") %></p>
+    <p>Account last update <%= @user.updated_at.strftime("%F") %></p>
+  </div>
+  <div class="profile-title ">
+    <h1>Hello <%= @user.name.capitalize %>, </h1>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+    <p class="border-bottom">Member since <%= @user.created_at.strftime("%F") %></p>
+    <br>
 
-  <div class="form-inputs">
+    <p>Contact at: <%= @user.email%></p>
+  </div>
+</div>
+<div class="container-edit-profil">
+
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
+
+
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -21,15 +41,16 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
-  </div>
+
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+   <%= f.button :submit, "Update" %>
   </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
+    <% end %>
+</div>
+<div class="container-cancel">
+  <h3>Cancel my account</h3>
+  <p>Unhappy?</p>
+  <p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+</div>
 <%= link_to "Back", :back %>

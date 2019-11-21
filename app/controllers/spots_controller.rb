@@ -21,7 +21,7 @@ class SpotsController < ApplicationController
 
   def create
     @spot = Spot.new(spot_params)
-
+    @spot.user = current_user
     if @spot.save
       redirect_to spot_path(@spot)
     else
@@ -48,7 +48,7 @@ class SpotsController < ApplicationController
   private
 
   def spot_params
-    params.require(:spot).permit(:name, :price_per_night, :address, :description, :photo_url)
+    params.require(:spot).permit(:marina_name, :price_per_night, :address, :description, :photo, :boat_size, :spot_name)
   end
 
   def set_spot
