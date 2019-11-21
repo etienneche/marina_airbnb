@@ -1,7 +1,11 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :destroy, :update]
   def index
-    @spots = Spot.geocoded
+    if params[:query].present?
+      @spots = Spot.search_by_marina_name_and_address(params[:query]).geocoded
+    else
+      @spots = Spot.all
+    end
     @markers = @spots.map do |spot|
       {
         lat: spot.latitude,

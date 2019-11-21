@@ -4,10 +4,15 @@
     <div class="form-wrapper">
       <div class="card bg-white p-4 form-font" style= "bottom: 150px;">
         <h2 style="margin-left: 20px;"> Book unique marinas!</h2>
-        <form>
-          <label>WHERE</label>
-          <input type="city or marina" class="form-control" placeholder="Anywhere">
           <div class="d-flex column mt-2">
+          <%= form_tag spots_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Search Marina location"
+          %>
+          <%= submit_tag "Search", class:"btn btn-login mt-2 text-white" %>
+          <% end %>
             <div>
               <label>CHECK-IN</label>
               <input type="city or marina" class="form-control" placeholder="DD.MM.YYYY">
@@ -17,11 +22,8 @@
               <input type="city or marina" class="form-control" placeholder="DD.MM.YYYY">
             </div>
           </div>
-          <label class="mt-2">BOAT-SIZE</label>
-          <input type="city or marina" class="form-control" placeholder="10m">
-          <%= link_to "Search", spots_path,  class:"btn btn-login mt-2 text-white" %>
-        </form>
-      </div>
+
+          </div>
     </div>
   </div>
 </div>
