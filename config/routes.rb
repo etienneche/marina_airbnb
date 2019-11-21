@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :spots do
     resources :bookings
+    resources :reviews
   end
 end
