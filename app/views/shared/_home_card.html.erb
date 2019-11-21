@@ -4,9 +4,9 @@
     <% @spots.each do |spot| %>
       <div class="col-4">
         <div class="card m-2">
-          <img class=" card-img-top img-fluid", style="height:200px" src= <%= spot.photo_url %>>
+          <%= cl_image_tag spot.photo, crop: :fill, class:"img-landing"%>
           <div class="card-body">
-              <h5 class="card-title"><%= spot.marina_name%></h5>
+              <h4 class="title-card"> <%= link_to spot.marina_name, spot_path(spot) %></h4>
               <p class="card-text">
                 <i class="fas fa-euro-sign ml-2"></i> <%= spot.price_per_night %>
               </p>
