@@ -1,0 +1,44 @@
+/* PROFILE SECTION */
+body {
+  background-color: white;
+}
+.container-profile {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 80px;
+  padding-bottom: 150px;
+}
+.profile-info {
+  border: 1px solid lightgray;
+  padding: 50px;
+}
+.profile-title {
+  width: 600px;
+}
+/* EDIT SECTION*/
+.container-edit-profil {
+  padding: 20px;
+  width: 400px;
+  margin: 10px auto;
+  border: 1px solid lightgray;
+}
+.form-actions {
+  background-color: #ff5b60;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.form-actions:hover {
+  background-color: red;
+}
+.btn {
+  color: white !important;
+}
+
+/* CANCEL SECTION */
+.container-cancel {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+
