@@ -251,11 +251,6 @@ form {
   margin-top: 40px;
 }
 
-/* Description */
-.description {
-  margin-top: 80px;
-}
-
 /*Card comment*/
 .comment-section {
   overflow: hidden;
@@ -284,5 +279,53 @@ form {
   margin-top: 8px;
 }
 
+.owner-name-grey {
+  font-size: 14px;
+  color: #767676;
+  font-weight: 400;
+  text-align: center;
+}
 
+.spot-title-grey {
+  font-size: 32px;
+  color: #484848;
+  font-weight: 800;
+}
 
+.spot-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #484848;
+}
+
+.info-box{
+  margin-right:24px;
+}
+
+.rating-card {
+  font-size: 12px;
+  font-weight: 400;
+  color: #484848;
+}
+
+.price-card {
+  font-size: 22px;
+  font-weight: 800;
+  color: #484848;
+}
+
+.heading-show {
+   font-size: 24px;
+}
+
+.review-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #484848;
+}
+
+.review-date{
+  font-size: 16px;
+  font-weight: 400;
+  color: #484848;
+}
