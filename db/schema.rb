@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2019_11_22_135839) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "spot_name"
     t.integer "boat_size"
     t.string "marina_name"
     t.float "latitude"
