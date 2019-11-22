@@ -3,11 +3,11 @@
   <div class="row">
     <% @spots.each do |spot| %>
       <div class="col-4">
-        <div class="card m-2">
+        <div class="card card-trip m-2">
           <%= cl_image_tag spot.photo, crop: :fill, class:"img-landing"%>
           <div class="card-body">
               <h4 class="title-card"> <%= link_to spot.marina_name, spot_path(spot) %></h4>
-              <p class="card-text">
+              <p class="card-text text-right">
                 <i class="fas fa-euro-sign ml-2"></i> <%= spot.price_per_night %>
               </p>
           </div>

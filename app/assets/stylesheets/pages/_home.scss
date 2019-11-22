@@ -54,7 +54,7 @@ h1.home {
 
 .btn-100
 {
-  max-width: 100% !important;
+  width: 100%;
   color: white;
 }
 
@@ -115,6 +115,22 @@ h1.home {
   color: $gray;
   font-size: 13px;
 }
+
+
+ form {
+  margin:5px !important;
+  width:100%;
+ }
+
+form > div label{
+  margin: 20px 0 0;
+}
+
+form > label {
+  margin: 0;
+}
+
+
 
 .img-spot {
   height: 200px;

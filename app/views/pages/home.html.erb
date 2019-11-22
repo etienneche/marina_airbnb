@@ -1,26 +1,32 @@
 <div class="home-video-wrapper">
  <%= video_tag "marina.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "home_video" %>
-  <div class="col-4 offset 2" style="left: 100px; ">
+  <div class="col-4 offset 2">
     <div class="form-wrapper">
-      <div class="card bg-white p-4 form-font" style= "bottom: 150px;">
-        <h2 style="margin-left: 20px;"> Book unique marinas!</h2>
+      <div class="card bg-white p-4 form-font">
+        <h2> Book unique marinas!</h2>
+
+
+
           <div class="d-flex column mt-2">
+
           <%= form_tag spots_path, method: :get do %>
+           <label>CITY OR MARINA</label>
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
-            placeholder: "Search Marina location"
+            placeholder: "Anywhere"
           %>
-          <%= submit_tag "Search", class:"btn btn-login mt-2 text-white" %>
-          <% end %>
-            <div>
+           <div>
               <label>CHECK-IN</label>
-              <input type="city or marina" class="form-control" placeholder="DD.MM.YYYY">
+              <input type="date" class="form-control" placeholder="DD.MM.YYYY">
             </div>
             <div>
               <label>CHECK-OUT</label>
-              <input type="city or marina" class="form-control" placeholder="DD.MM.YYYY">
+              <input type="date" class="form-control" placeholder="DD.MM.YYYY">
             </div>
+          <%= submit_tag "Search", class:"btn btn-login btn-100 mt-4 text-white" %>
+          <% end %>
+
           </div>
 
           </div>
