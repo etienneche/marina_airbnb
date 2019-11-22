@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :destroy, :update]
+  before_action :set_booking, only: [:destroy, :show, :edit, :update]
   before_action :set_spot, only: [:edit]
   def index
     @bookings = Booking.all
@@ -19,8 +19,8 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to bookings_path(@booking)
     else
-      flash[:alert] = "Alert"
-      redirect_to spot_path( params[:booking][:spot_id])
+      flash[:alert] = "The chosen end date must be after the start date & cannot be in the past"
+      redirect_to spot_path(params[:booking][:spot_id])
     end
   end
 
@@ -37,7 +37,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to spot_bookings_path
+    redirect_to bookings_path
   end
 
   private
@@ -47,10 +47,10 @@ class BookingsController < ApplicationController
   end
 
   def set_booking
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:format])
   end
 
   def set_spot
-    @spot = Spot.find(params[:spot_id])
+    @spot = Spot.find(params[:id])
   end
 end

@@ -2,13 +2,16 @@
   <div class="container">
     <h1>Edit my Booking</h1>
     <div class="form-group ">
-          <%= simple_form_for [@spot, @booking] do |f| %>
+          <%= simple_form_for @booking do |f| %>
             <%= f.input   :start_date,
                           label: "Check-in",
                           required: true %>
             <%= f.input   :end_date,
                           label: "Check-out",
                           required: true %>
+            <%= f.input   :spot_id,
+                          as: :hidden,
+                          input_html: { value: @spot.id } %>
             <div class="form-actions btn-login">
               <%= f.button :submit, "Reserve" %>
             </div>
