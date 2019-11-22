@@ -22,6 +22,28 @@
 
     <p class="spot-text mt-4"> <%= @spot.description %></p>
     <div class="border-bottom pt-4">
+     <p>
+        <button class="form-actions btn-login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Add a New Review
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <div class="form-group ">
+            <%= simple_form_for [@spot, @review] do |f| %>
+              <%= f.input   :stars,
+                            label: "Rating",
+                            required: true %>
+              <%= f.input   :description,
+                            label: "Description review",
+                            required: true %>
+              <div class="form-actions btn-login">
+                <%= f.button :submit, "Post review" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
       <h2 class="price-card heading-show">Reviews</h2>
       <div class="d-flex">
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar" />

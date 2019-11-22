@@ -18,6 +18,7 @@ class SpotsController < ApplicationController
   def show
     @user = current_user
     @booking = Booking.new
+    @review = Review.new
   end
 
   def new
