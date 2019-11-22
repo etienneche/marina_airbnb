@@ -1,12 +1,13 @@
 <div class="d-flex container-profile">
   <div class="profile-info">
-    <%= cl_image_tag @user.photo, crop: :fill , class: "avatar"%>
+
     <p>Upload my profile picture.</p>
     <h4><%= @user.name.capitalize %> personnal infos:</h4>
     <p>✔️ E-mail address confirm</p>
     <p>Account create <%= @user.created_at.strftime("%F") %></p>
     <p>Account last update <%= @user.updated_at.strftime("%F") %></p>
   </div>
+  <%= cl_image_tag current_user.photo.url(:bright_face), style:"height: 130px" %>
   <div class="profile-title ">
     <h1>Hello <%= @user.name.capitalize %>, </h1>
 
@@ -15,6 +16,7 @@
 
     <p>Contact at: <%= @user.email%></p>
   </div>
+
 </div>
 <div class="container-edit-profil">
 
