@@ -73,6 +73,15 @@ puts "Create the spots"
 
    Spot.create!(
     price_per_night: rand(200..1000),
+    marina_name: "Marina Port Olimpic de Barcelona",
+    address: "Marina Campania",
+    description: "The region of Campania is one of the preferred destinations of tourists around the world, thanks to its historical inheritance, the beautiful coastal sceneries and the famous cities of Naples, Sorrento, Salerno, Positano and others.",
+    remote_photo_url: "https://pea-7f65.kxcdn.com/img/image_db/marina_guides_spain_marina_port_vell-942.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
+     
+  Spot.create!(
+    price_per_night: rand(200..1000),     
     marina_name: "Marina da Torreira",
     address: "Marina da Torreira",
     description: "Marina which is in the northernmost area of ​​the ria. Not to be missed, with excellent restaurants nearby.",
@@ -80,7 +89,16 @@ puts "Create the spots"
     boat_size: [10,20,30].sample,
     user_id: 1)
 
-   Spot.create!(
+  Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Marina Port Olimpic de Barcelona",
+    address: "Marina Campania",
+    description: "The region of Campania is one of the preferred destinations of tourists around the world, thanks to its historical inheritance, the beautiful coastal sceneries and the famous cities of Naples, Sorrento, Salerno, Positano and others.",
+    remote_photo_url: "https://pea-7f65.kxcdn.com/img/image_db/marina_guides_spain_marina_port_vell-942.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
+       
+  Spot.create!(
     price_per_night: rand(200..1000),
     marina_name: "Marina da Afurada",
     address: "Marina da Afurada",
@@ -89,7 +107,26 @@ puts "Create the spots"
     boat_size: [10,20,30].sample,
     user_id: 1)
 
-   Spot.create!(
+ Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Puerto Deportivo Marina Isla Canela",
+    address: "Puerto Deportivo Marina Isla Canela",
+    description: "Marina Isla Canela is a marina located in the natural setting of Isla Canela, within the municipality of Ayamonte, in the Huelva province.",
+    remote_photo_url: "https://www.andalucia.org/media/fotos/image_189868_jpeg_800x600_q85.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
+
+Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Puerto Deportivo de Benidorm",
+    address: "Puerto Deportivo de Benidorm",
+    description: "Club Náutico Benidorm is situated in the famous coastal town of Benidorm, on the White Coast of the Mediterranean Sea. This marina is identified also by Port of Benidorm. Benidorm is a complex town and a pleasant mix of history and modernism, having tall buildings and city lights.",
+    remote_photo_url: "https://cdn.pixabay.com/photo/2018/10/28/23/59/marina-3780195_960_720.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
+
+
+Spot.create!(
     price_per_night: rand(200..1000),
     marina_name: "Marina Viana do Castelo",
     address: "Marina Viana do Castelo",
