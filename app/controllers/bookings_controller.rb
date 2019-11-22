@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :destroy, :update]
-  before_action :set_spot, only: [:create]
+  before_action :set_spot, only: [:edit]
   def index
     @bookings = Booking.all
   end
@@ -15,12 +15,12 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.spot = @spot
 
     if @booking.save
-      redirect_to spot_bookings_path(@booking)
+      redirect_to bookings_path(@booking)
     else
-      render :new
+      flash[:alert] = "Alert"
+      redirect_to spot_path( params[:booking][:spot_id])
     end
   end
 
@@ -29,7 +29,7 @@ class BookingsController < ApplicationController
 
   def update
     if @booking.update(booking_params)
-      redirect_to booking_path(@booking)
+      redirect_to spot_bookings_path(@booking)
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :spot_id)
   end
 
   def set_booking

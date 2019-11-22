@@ -1,2 +1,18 @@
-<h1>Bookings#edit</h1>
-<p>Find me in app/views/bookings/edit.html.erb</p>
+<div class="pt-4">
+  <div class="container">
+    <h1>Edit my Booking</h1>
+    <div class="form-group ">
+          <%= simple_form_for [@spot, @booking] do |f| %>
+            <%= f.input   :start_date,
+                          label: "Check-in",
+                          required: true %>
+            <%= f.input   :end_date,
+                          label: "Check-out",
+                          required: true %>
+            <div class="form-actions btn-login">
+              <%= f.button :submit, "Reserve" %>
+            </div>
+          <% end %>
+        </div>
+  </div>
+</div>

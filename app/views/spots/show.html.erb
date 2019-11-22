@@ -2,16 +2,16 @@
   <div class="banner" style="background-size: cover; height: 400px; width: 100vw; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @spot.photo %>);">
   </div>
 </div>
+
 <div class="d-flex bg-white" style="padding-left:200px; padding-right:200px; padding-top:40px;">
   <div style="height: 100vh; overflow:scroll; display:absolute; width: 60%; padding-right:30px;">
     <div class="d-flex justify-content-between border-bottom">
       <div>
         <h2 class="spot-title-grey"><%= @spot.marina_name %></h2>
         <div class="d-flex">
-          <p class="info-box spot-text"><%= @spot.marina_name %> </p>
-          <p class="info-box spot-text"><%= @spot.price_per_night %>€ </p>
-          <p class="info-box spot-text">Secured </p>
-          <p class="spot-text"><%= @spot.boat_size %></p>
+          <p class="info-box spot-text"> <i class="fas fa-map-pin"></i> <%= @spot.marina_name %> </p>
+          <p class="info-box spot-text"><i class="fas fa-euro-sign"></i> <%= @spot.price_per_night %> </p>
+          <p class="spot-text"><i class="fas fa-anchor"></i> <%= @spot.boat_size %>m</p>
         </div>
       </div>
       <div class="card-owner-infos">
@@ -56,13 +56,16 @@
           </p>
         </div>
         <div class="form-group ">
-          <%= simple_form_for [@spot, @booking] do |f| %>
+          <%= simple_form_for [@booking] do |f| %>
             <%= f.input   :start_date,
                           label: "Check-in",
                           required: true %>
             <%= f.input   :end_date,
                           label: "Check-out",
                           required: true %>
+            <%= f.input   :spot_id,
+                          as: :hidden,
+                          input_html: { value: @spot.id } %>
             <div class="form-actions btn-login">
               <%= f.button :submit, "Reserve" %>
             </div>
