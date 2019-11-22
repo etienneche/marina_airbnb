@@ -11,21 +11,22 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            More
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "My Bookings", bookings_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
         <li class="nav-item">
           <%= link_to "Show Spots", spots_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Host Spots", new_spot_path, class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            More
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "My Bookings", destroy_user_session_path, class: "dropdown-item" %>
-            <%= link_to "Log out", bookings_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
+
         <li>
           <% if !current_user.photo.nil?%>
             <%= cl_image_tag current_user.photo.url(:bright_face), style:"height: 40px" %>
