@@ -18,7 +18,7 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def edit?
-    true
+    return true
   end
 
   def update?
