@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :edit, :destroy, :update]
-  before_action :set_spot, only: [:create]
+  before_action :set_booking, only: [:destroy, :show, :edit, :update]
+  before_action :set_spot, only: [:edit]
   def index
     @bookings = policy_scope(Booking).order(created_at: :desc)
     @bookings = Booking.all
@@ -16,13 +16,13 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.spot = @spot
-    authorize @booking
 
+    authorize @booking
     if @booking.save
-      redirect_to spot_bookings_path(@booking), notice: 'The booking was successfully created.'
+      redirect_to bookings_path(@booking)
     else
-      render :new
+      flash[:alert] = "The chosen end date must be after the start date & cannot be in the past"
+      redirect_to spot_path(params[:booking][:spot_id])
     end
   end
 
@@ -35,6 +35,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.update(booking_params)
       redirect_to booking_path(@booking), notice: 'The booking was successfully updated.'
+
     else
       render :edit
     end
@@ -43,20 +44,20 @@ class BookingsController < ApplicationController
   def destroy
     authorize @booking
     @booking.destroy
-    redirect_to spot_bookings_path, notice: 'The booking was successfully destroyed.'
+    redirect_to bookings_path, notice: 'The booking was successfully destroyed.'
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :spot_id)
   end
 
   def set_booking
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:format])
   end
 
   def set_spot
-    @spot = Spot.find(params[:spot_id])
+    @spot = Spot.find(params[:id])
   end
 end

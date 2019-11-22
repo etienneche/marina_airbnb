@@ -21,6 +21,7 @@ class SpotsController < ApplicationController
      @user = current_user
     authorize @spot
     @booking = Booking.new
+    @review = Review.new
   end
 
   def new
