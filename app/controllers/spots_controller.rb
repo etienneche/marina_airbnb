@@ -18,10 +18,10 @@ class SpotsController < ApplicationController
   end
 
   def show
-     @user = current_user
-    authorize @spot
+    @user = current_user
     @booking = Booking.new
     @review = Review.new
+    authorize @spot
   end
 
   def new
@@ -65,6 +65,6 @@ class SpotsController < ApplicationController
 
   def set_spot
     @spot = Spot.find(params[:id])
-    # authorize @spot
+
   end
 end

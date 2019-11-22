@@ -12,5 +12,4 @@ class SpotPolicy < ApplicationPolicy
   def create?
     return true
   end
-
 end
