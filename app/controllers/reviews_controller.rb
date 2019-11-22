@@ -13,15 +13,15 @@ class ReviewsController < ApplicationController
       flash[:alert] = "Minimum of 10 characteres."
     end
   end
+
   def new
     @review = Review.new
-
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:stars, :description)
+    params.require(:review).permit(:stars, :description, :title)
   end
 
   def set_review
@@ -30,5 +30,4 @@ class ReviewsController < ApplicationController
   def set_spot
     @spot = Spot.find(params[:spot_id])
   end
-
 end
