@@ -21,9 +21,9 @@
     </div>
 
     <p class="spot-text mt-4"> <%= @spot.description %></p>
-    <div class="border-bottom pt-4">
+    <div class="border-bottom border-top pt-4 pl-2">
      <p>
-        <button class="form-actions btn-login" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button class="form-actions btn-login text-white" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Add a New Review
         </button>
       </p>
@@ -47,19 +47,35 @@
           </div>
         </div>
       </div>
-      <h2 class="price-card heading-show">Reviews</h2>
-      <div class="review-card">
-        <div class="d-flex">
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar" />
-          <div class="pl-3">
-            <% @reviews.each do |review| %>
-              <p class="review-title"><%= review.title %></p>
-              <p class="review-date"><%= review.stars %></p>
-              <p class="review-description"><%= review.description %></p>
-            <% end %>
+      <div>
+        <h2 class="price-card heading-show pt-4 pb-3">Reviews</h2>
+        <div class = "d-flex">
+          <div class="review-heading">
+            <p>
+              <i class="fas fa-star" style="color:#018489"></i>
+              <%= @reviews.average(:stars).to_s.to_f.round(2) %> |
+            </p>
+          </div>
+          <div class="pl-2">
+            <p class="review-heading">
+              <strong><%= @reviews.length%></strong>
+              <%= @reviews.length == 1 ? "Review" : "Reviews" %>
+            </p>
           </div>
         </div>
       </div>
+      <% @reviews.each do |review| %>
+      <div class="border-bottom mt-4">
+        <div class="d-flex">
+          <img src="https://source.unsplash.com/featured/?face", class="avatar" />
+          <div class="pl-4">
+            <p class="review-name mb-0"><%= review.title %></p>
+            <p class="review-date"><%= "⭐️" * review.stars %></p>
+          </div>
+        </div>
+        <p class="review-description pt-2"><%= review.description %></p>
+      </div>
+      <% end %>
     </div>
   </div>
 
@@ -76,9 +92,9 @@
           </h5>
           <p class="rating-card">
             <i class="fas fa-star" style="color:#018489"></i>
-            <%= rand(2.0..5.0).round(2) %>
+            <%= @reviews.average(:stars).to_s.to_f.round(2) %>
             <span style="color:#717171">
-              (<%= rand(100..600) %> reviews)
+              (<%= @reviews.length %> <%= @reviews.length == 1 ? "review" : "reviews" %>)
             </span>
           </p>
         </div>
