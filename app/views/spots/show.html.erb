@@ -53,18 +53,17 @@
           <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="avatar" />
           <div class="pl-3">
             <% @reviews.each do |review| %>
-            <p class="review-title mb-0"><%= Review.title %></p>
-            <p class="review-date"><%= Review.stars %></p>
-            <p class="review-description"><%= Review.description %></p>
+              <p class="review-title"><%= review.title %></p>
+              <p class="review-date"><%= review.stars %></p>
+              <p class="review-description"><%= review.description %></p>
             <% end %>
           </div>
         </div>
-        <p class="review-date mt-3">
-          <%=  %>
-        </p>
       </div>
     </div>
   </div>
+
+
   <div style="display:absolute; width: 40%;">
     <div class="card">
       <div class="card-body p-4">
