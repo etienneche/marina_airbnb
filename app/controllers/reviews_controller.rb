@@ -7,9 +7,10 @@ class ReviewsController < ApplicationController
     @review.spot = @spot
 
     if @review.save
-      redirect_to spot_reviews_path(@review)
+      redirect_to spot_path(@spot)
     else
-      render 'spots/show'
+      redirect_to spot_path(@spot)
+      flash[:alert] = "Minimum of 10 characteres."
     end
   end
   def new
