@@ -7,6 +7,9 @@ body {
   justify-content: space-around;
   padding-top: 80px;
   padding-bottom: 150px;
+  border-top: 1px solid $light-gray;
+  border-bottom: 1px solid $light-gray;
+  margin: 80px;
 }
 .profile-info {
   border: 1px solid $light-gray;
@@ -14,6 +17,7 @@ body {
 }
 .profile-title {
   width: 600px;
+  background-image: url()
 }
 /* EDIT SECTION*/
 .container-edit-profil {
