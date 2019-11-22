@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_22_115731) do
+ActiveRecord::Schema.define(version: 2019_11_22_122338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,13 +28,11 @@ ActiveRecord::Schema.define(version: 2019_11_22_115731) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "description"
-    t.bigint "booking_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "stars"
     t.bigint "user_id", null: false
     t.bigint "spot_id", null: false
-    t.index ["booking_id"], name: "index_reviews_on_booking_id"
     t.index ["spot_id"], name: "index_reviews_on_spot_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
@@ -46,7 +44,6 @@ ActiveRecord::Schema.define(version: 2019_11_22_115731) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "spot_name"
     t.integer "boat_size"
     t.string "marina_name"
     t.float "latitude"
@@ -71,7 +68,6 @@ ActiveRecord::Schema.define(version: 2019_11_22_115731) do
 
   add_foreign_key "bookings", "spots"
   add_foreign_key "bookings", "users"
-  add_foreign_key "reviews", "bookings"
   add_foreign_key "reviews", "spots"
   add_foreign_key "reviews", "users"
   add_foreign_key "spots", "users"
