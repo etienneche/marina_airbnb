@@ -20,7 +20,7 @@ class SpotsController < ApplicationController
   def show
     @user = current_user
     @booking = Booking.new
-    @reviews = Review.all
+    @reviews = Review.all.where("spot_id = ?", @spot.id)
     @review = Review.new
     authorize @spot
   end

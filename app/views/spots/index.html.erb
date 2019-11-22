@@ -10,7 +10,13 @@
           <div class="card-tag d-flex justify-content-between">
             <p class="desc-card mb-1"> <i class="fas fa-anchor"></i> Boat Size: <%= spot.boat_size %>m</p>
             <div>
-              <p class="desc-card" style="color:#222222"><i class="fas fa-star" style="color:#ff385c"></i> <%= rand(2.0..5.0).round(1) %> <span style="color:#717171">(<%= rand(100..600) %>)</span></p>
+              <p class="desc-card" style="color:#222222">
+                <i class="fas fa-star" style="color:#ff385c"></i>
+                <%= (Review.all.where("spot_id =?",spot.id).average(:stars).to_s).to_f.round(2) %>
+                <span style="color:#717171">
+                  (<%= Review.all.where("spot_id =?",spot.id).length %>)
+                </span>
+              </p>
             </div>
           </div>
           <h4 class="title-card"> <%= link_to spot.marina_name, spot_path(spot) %></h4>

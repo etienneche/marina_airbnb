@@ -27,6 +27,7 @@ class ReviewsController < ApplicationController
   def set_review
     @review = Review.find(params[:id])
   end
+
   def set_spot
     @spot = Spot.find(params[:spot_id])
   end
