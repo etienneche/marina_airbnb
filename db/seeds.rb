@@ -52,7 +52,6 @@ puts "Create the spots"
     remote_photo_url: "https://magnolia-portugal.dunegestion.com/public/magnolia-portugal/tHcIp_marina4.jpg",
     boat_size: [10,20,30].sample,
     user_id: 1)
-#done
 
    Spot.create!(
     price_per_night: rand(200..1000),
@@ -72,8 +71,33 @@ puts "Create the spots"
     boat_size: [10,20,30].sample,
     user_id: 1)
 
+   Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Marina da Torreira",
+    address: "Marina da Torreira",
+    description: "Marina which is in the northernmost area of ​​the ria. Not to be missed, with excellent restaurants nearby.",
+    remote_photo_url: "https://aister.com/wp-content/uploads/2017/10/porto-torreira.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
 
-#done
+   Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Marina da Afurada",
+    address: "Marina da Afurada",
+    description: "Fanstastic Marina! Clean, well maintained, great service (bread delivered to the boat every morning free of charge plus loads of discounts for tourist attractions etc) and Cecilia, the lovely lady at the Marina office is an angel 💙🙌⛵️",
+    remote_photo_url: "https://media.timeout.com/images/103973265/image.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
+
+   Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Marina Viana do Castelo",
+    address: "Marina Viana do Castelo",
+    description: "Nestled in Castelo's beautiful South Bay, our marina provides boaters with a peaceful, quiet atmosphere away from downtown. The tall swaying palm trees and pristine, park-like setting of Chula Vista Yacht Harbor presents a tropical paradise with uncrowded waters, no boat surge and spectacular sunsets.",
+    remote_photo_url: "https://1.bp.blogspot.com/-xqmL9nMFvnk/U9l4XSSp4LI/AAAAAAAAIJc/SeUrndb4vCk/s1600/Marina,+Viana+do+Castelo.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
+
 
 puts "Done, create the spots"
 
