@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:destroy, :show, :edit, :update]
   before_action :set_spot, only: [:edit]
   def index
+    @bookings = policy_scope(Booking).order(created_at: :desc)
     @bookings = Booking.all
   end
 
@@ -16,6 +17,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
 
+    authorize @booking
     if @booking.save
       redirect_to bookings_path(@booking)
     else
@@ -25,19 +27,24 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @booking.user = current_user
+    authorize @booking
   end
 
   def update
+    @booking.user = current_user
     if @booking.update(booking_params)
-      redirect_to spot_bookings_path(@booking)
+      redirect_to booking_path(@booking), notice: 'The booking was successfully updated.'
+
     else
       render :edit
     end
   end
 
   def destroy
+    authorize @booking
     @booking.destroy
-    redirect_to bookings_path
+    redirect_to bookings_path, notice: 'The booking was successfully destroyed.'
   end
 
   private
