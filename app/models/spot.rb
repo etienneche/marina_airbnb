@@ -12,7 +12,7 @@ class Spot < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   belongs_to :user
-  has_many :reviews, through: :booking
+  has_many :reviews, dependent: :delete_all
   has_many :bookings, dependent: :delete_all
 
   validates :marina_name, presence: true

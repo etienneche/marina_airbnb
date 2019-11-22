@@ -63,6 +63,16 @@ puts "Create the spots"
     boat_size: [10,20,30].sample,
     user_id: 1)
 
+   Spot.create!(
+    price_per_night: rand(200..1000),
+    marina_name: "Marina de Vila Franca de Xira",
+    address: "Marina de Vila Franca de Xira",
+    description: "Very well located this Marina, pertissimo of the trains and very near the center of the Villa. Friendly staff and a very nice park to spend a well spent afternoon. The prices of this marina are much more competitive than those practiced for example in Lisbon and yet it is only 30 min from the center of Lisbon by train. I recommend.",
+    remote_photo_url: "https://www.marinaparquedasnacoes.pt/data/uploads/2015/05/vf-xira01.jpg",
+    boat_size: [10,20,30].sample,
+    user_id: 1)
+
+
 #done
 
 puts "Done, create the spots"

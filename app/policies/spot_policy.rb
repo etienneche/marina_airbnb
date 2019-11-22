@@ -20,5 +20,4 @@ class SpotPolicy < ApplicationPolicy
   def new?
     true
   end
-
 end
